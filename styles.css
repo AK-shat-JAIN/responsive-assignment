@@ -1,0 +1,128 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 100px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  /* Container Layout */
+  .container {
+    display: flex;
+    height: calc(100vh - 100px);
+  }
+  
+  .left-menu {
+    width: 20%;
+    background: #f4f4f4;
+    padding: 1rem;
+    overflow: hidden;
+    text-align: center;
+    transition: width 0.3s;
+  }
+  
+  .left-menu ul {
+    list-style: none;
+  }
+  
+  .left-menu ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 1rem;
+    background: #e8f5ff;
+  }
+  
+  .right-panel {
+    width: 20%;
+    background: #ddd;
+    padding: 1rem;
+  }
+  
+  .footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+  }
+
+  .left-menu.collapsed ul li {
+    font-size: 0; /* Hides the text for menu items */
+  }
+  
+  .left-menu.collapsed ul li::before {
+    content: "  "; /* Optionally add bullet indicators for the collapsed state */
+    font-size: 1rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }  
+
+/* Left Menu Styling */
+.left-menu {
+    width: 20%;
+    background: #f4f4f4;
+    padding: 1rem;
+    overflow: hidden;
+    transition: width 0.3s ease, padding 0.3s ease;
+  }
+  
+  .left-menu.collapsed {
+    width: 5%; /* Shrink to minimal width */
+    padding: 1rem;
+  }
+  
+  /* Toggle Button Styling */
+  #toggle-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Hide Menu Items in Collapsed State */
+  .left-menu.collapsed #menu-items {
+    display: none;
+  }
+  
+  
+  
+  /* Responsive Design */
+  @media screen and (max-width: 992px) {
+    .left-menu {
+      width: 15%;
+    }
+    .right-panel {
+      width: 15%;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .left-menu,
+    .right-panel {
+      display: none;
+    }
+  }
+  
